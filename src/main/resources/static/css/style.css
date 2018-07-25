@@ -1,0 +1,36 @@
+.bg-color {
+    background-color: #AFEEEE;
+    color: black;
+}
+
+.footer {
+    background-color: #AFEEEE;
+    color: black;
+}
+
+.jumbotron {
+    background-color: #AFEEEE;
+    color: black;
+}
+
+.nav-item>a:hover, .navbar-brand:hover {
+    color: #FFFFFF;
+}
+
+iframe {
+    overflow:hidden;
+}
+
+.hr-black {
+    background-color: black;
+    height: 3px;
+}
+
+.hr-blue {
+    background-color: #AFEEEE;
+    height: 3px;
+}
+
+.btn-blue {
+    background-color: #AFEEEE;
+}
