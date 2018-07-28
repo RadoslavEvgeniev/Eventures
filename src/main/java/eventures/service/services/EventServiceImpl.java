@@ -32,4 +32,15 @@ public class EventServiceImpl implements EventService {
 
         return eventServiceModels;
     }
+
+    @Override
+    public EventServiceModel extractEventById(String id) {
+        Event eventFromDb = this.eventRepository.findById(id).orElse(null);
+
+        if (eventFromDb == null) {
+            throw new IllegalArgumentException("Invalid event id.");
+        }
+
+        return (EventServiceModel) MappingUtil.map(eventFromDb, EventServiceModel.class);
+    }
 }

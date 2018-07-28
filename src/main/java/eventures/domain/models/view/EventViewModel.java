@@ -9,6 +9,7 @@ public class EventViewModel {
     private String place;
     private LocalDateTime start;
     private LocalDateTime end;
+    private int numberOfTickets;
 
     public EventViewModel() {
     }
@@ -51,5 +52,13 @@ public class EventViewModel {
 
     public void setEnd(LocalDateTime end) {
         this.end = end;
+    }
+
+    public int getNumberOfTickets() {
+        return this.numberOfTickets;
+    }
+
+    public void setNumberOfTickets(int numberOfTickets) {
+        this.numberOfTickets = numberOfTickets;
     }
 }

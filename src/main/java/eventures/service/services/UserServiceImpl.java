@@ -61,6 +61,17 @@ public class UserServiceImpl implements UserService {
         this.userRepository.save(user);
     }
 
+    @Override
+    public UserServiceModel extractUserByUsername(String username) {
+        User userFromDb = this.userRepository.findByUsername(username).orElse(null);
+
+        if (userFromDb == null) {
+            throw new UsernameNotFoundException("Invalid user.");
+        }
+
+        return (UserServiceModel) MappingUtil.map(userFromDb, UserServiceModel.class);
+    }
+
     private void seedRolesInDb() {
         if (this.roleRepository.count() == 0) {
             UserRole userRole = new UserRole();

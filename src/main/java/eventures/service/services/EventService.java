@@ -7,4 +7,6 @@ import java.util.List;
 public interface EventService {
 
     List<EventServiceModel> extractAllEvents();
+
+    EventServiceModel extractEventById(String id);
 }
