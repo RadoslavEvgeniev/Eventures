@@ -39,3 +39,8 @@ iframe {
     background-color: #AFEEEE;
     border: #AFEEEE;
 }
+
+.border-blue {
+    border: solid;
+    border-color: #AFEEEE;
+}

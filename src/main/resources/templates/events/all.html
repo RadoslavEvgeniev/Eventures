@@ -1,0 +1,33 @@
+<th:block>
+    <div class="container-fluid">
+        <h1 class="text text-center">All Events</h1>
+        <hr class="hr-blue">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Start</th>
+                    <th scope="col">End</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <th:block th:each="event,iter : ${events}">
+                    <tr>
+                        <th scope="row" th:text="${iter.index + 1}"></th>
+                        <td th:text="${event.name + ' - at ' + event.place}"></td>
+                        <td th:text="${#temporals.format(event.start, 'dd/MM/yyyy HH:mm')}"></td>
+                        <td th:text="${#temporals.format(event.end, 'dd/MM/yyyy HH:mm')}"></td>
+                        <td>
+                            <form th:action="@{/orders/{id}(id=${event.id})}" th:method="post">
+                                Tickets <input class="border-blue" type="number" name="numberOfTickets">
+                                <button class="btn btn-blue" type="submit">Order</button>
+                            </form>
+                        </td>
+                    </tr>
+                </th:block>
+            </tbody>
+        </table>
+    </div>
+</th:block>
