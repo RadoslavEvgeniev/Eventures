@@ -9,4 +9,6 @@ public interface EventService {
     List<EventServiceModel> extractAllEvents();
 
     EventServiceModel extractEventById(String id);
+
+    void importEvent(EventServiceModel eventServiceModel);
 }

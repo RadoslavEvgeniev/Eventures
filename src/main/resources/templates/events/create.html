@@ -1,0 +1,50 @@
+<th:block>
+    <div class="container-fluid">
+        <h1 class="text text-center">Register</h1>
+        <hr class="hr-blue">
+        <div class="d-flex justify-content-center align-items-center container ">
+            <form class="col-md-6" th:object="${eventCreateBindingModel}" th:action="@{/events/create}" method="post">
+                <div class="form-row">
+                    <div class="col col-md-5 mr-4 ml-4">
+                        <label for="name">Name</label>
+                        <input class="form-control" th:field="*{name}"
+                               th:styleappend="${#fields.hasErrors('name')} ? 'border-color: red'" type="text" id="name" placeholder="Name..." required>
+                        <small class="text text-danger" th:each="error : ${#fields.errors('name')}" th:text="${error}"></small>
+                    </div>
+                    <div class="col col-md-5 ml-4 mr-2">
+                        <label for="place">Place</label>
+                        <input class="form-control" th:field="*{place}" type="text" id="place" placeholder="Place..." required>
+                    </div>
+                </div>
+                <hr class="hr-blue">
+                <div class="form-row">
+                    <div class="col col-md-5 mr-4 ml-4">
+                        <label for="start">Start</label>
+                        <input class="form-control" th:field="*{start}"
+                               th:styleappend="${#fields.hasErrors('start')} ? 'border-color: red'" type="datetime-local" id="start" required>
+                        <small class="text text-danger" th:each="error : ${#fields.errors('start')}" th:text="${error}"></small>
+                    </div>
+                    <div class="col col-md-5 ml-4 mr-2">
+                        <label for="end">End</label>
+                        <input class="form-control" th:field="*{end}" type="datetime-local" id="end" required>
+                    </div>
+                </div>
+                <hr class="hr-blue">
+                <div class="form-row">
+                    <div class="col col-md-5 mr-4 ml-4">
+                        <label for="totalTickets">Total Tickets</label>
+                        <input class="form-control" th:field="*{totalTickets}" type="number" id="totalTickets" required>
+                    </div>
+                    <div class="col col-md-5 mr-4 mr-2">
+                        <label for="pricePerTicket">Price Per Ticket</label>
+                        <input class="form-control" th:field="*{pricePerTicket}" type="number" step="any" id="pricePerTicket" required>
+                    </div>
+                </div>
+                <hr class="hr-blue">
+                <div class="text text-center">
+                    <button type="submit" class="btn btn-blue">Create Event</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</th:block>

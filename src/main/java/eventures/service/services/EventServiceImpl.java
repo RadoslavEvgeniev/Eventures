@@ -43,4 +43,9 @@ public class EventServiceImpl implements EventService {
 
         return (EventServiceModel) MappingUtil.map(eventFromDb, EventServiceModel.class);
     }
+
+    @Override
+    public void importEvent(EventServiceModel eventServiceModel) {
+        this.eventRepository.save((Event) MappingUtil.map(eventServiceModel, Event.class));
+    }
 }
