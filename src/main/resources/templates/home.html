@@ -1,0 +1,9 @@
+<th:block>
+    <div class="jumbotron mt-3">
+        <h1 sec:authorize="hasRole('ROLE_ADMIN')" th:text="|Welcome, Administrator - ${username}|"></h1>
+        <h1 sec:authorize="!hasRole('ROLE_ADMIN')" th:text="|Welcome, ${username}!|"></h1>
+        <hr class="hr-black">
+        <h4 class="text" sec:authorize="hasRole('ROLE_ADMIN')">Enjoy your work.</h4>
+        <h4 class="text" sec:authorize="!hasRole('ROLE_ADMIN')">Eventures wishes you an exciting experience.</h4>
+    </div>
+</th:block>

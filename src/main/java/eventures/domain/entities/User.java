@@ -130,7 +130,7 @@ public class User implements UserDetails {
     @Override
     @Column(name = "is_enabled")
     public boolean isEnabled() {
-        return this.isEnabled;
+        return true;
     }
 
     public void setEnabled(boolean enabled) {
@@ -138,7 +138,7 @@ public class User implements UserDetails {
     }
 
     @Override
-    @OneToMany(targetEntity = UserRole.class, fetch = FetchType.EAGER)
+    @ManyToMany(targetEntity = UserRole.class, fetch = FetchType.EAGER)
     @JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     public Set<UserRole> getAuthorities() {
         return this.authorities;

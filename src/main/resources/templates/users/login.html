@@ -1,0 +1,28 @@
+<th:block>
+    <div class="container-fluid">
+        <h1 class="text text-center">Login</h1>
+        <hr class="hr-blue">
+        <div class="d-flex justify-content-center align-items-center container ">
+            <form class="col-md-6" th:object="${userLoginBindingModel}" th:action="@{/login}" th:method="post">
+                <div class="form-group">
+                    <label for="username" >Username or Email</label>
+                    <input class="form-control" th:field="*{username}" type="text"  id="username" placeholder="Enter username"  required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input class="form-control" th:field="*{password}" type="password" id="password" placeholder="Password" required>
+                </div>
+                <hr class="hr-blue">
+                    <div class="form-check text text-center">
+                        <input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Remember Me</label>
+                    </div>
+                <hr class="hr-blue">
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+                <div class="text text-center">
+                    <button type="submit" class="btn btn-blue">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</th:block>

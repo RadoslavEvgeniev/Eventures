@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.springframework.data:spring-data-commons:2.1.0.BUILD-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.0.BUILD-SNAPSHOT/spring-data-commons-2.1.0.BUILD-20180724.095700-722.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.0.BUILD-SNAPSHOT/spring-data-commons-2.1.0.BUILD-20180725.032401-724.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.0.BUILD-SNAPSHOT/spring-data-commons-2.1.0.BUILD-20180724.095700-722-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.0.BUILD-SNAPSHOT/spring-data-commons-2.1.0.BUILD-20180725.032401-724-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.0.BUILD-SNAPSHOT/spring-data-commons-2.1.0.BUILD-20180724.095700-722-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.0.BUILD-SNAPSHOT/spring-data-commons-2.1.0.BUILD-20180725.032401-724-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

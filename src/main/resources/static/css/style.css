@@ -34,3 +34,8 @@ iframe {
 .btn-blue {
     background-color: #AFEEEE;
 }
+
+.btn-logout {
+    background-color: #AFEEEE;
+    border: #AFEEEE;
+}

@@ -1,0 +1,53 @@
+<th:block>
+    <div class="container-fluid">
+        <h1 class="text text-center">Register</h1>
+        <hr class="hr-blue">
+        <div class="d-flex justify-content-center align-items-center container ">
+            <form class="col-md-6" th:object="${userRegisterBindingModel}" th:action="@{/register}" method="post">
+                <div class="form-row">
+                    <div class="col col-md-5 mr-4 ml-4">
+                        <label for="username">Username</label>
+                        <input class="form-control" th:field="*{username}"
+                               th:styleappend="${#fields.hasErrors('username')} ? 'border-color: red'" type="text" id="username" placeholder="Username..." required>
+                        <small class="text text-danger" th:each="error : ${#fields.errors('username')}" th:text="${error}"></small>
+                    </div>
+                    <div class="col col-md-5 ml-4 mr-2">
+                        <label for="email">Email</label>
+                        <input class="form-control" th:field="*{email}" type="text" id="email" placeholder="Email..." required>
+                    </div>
+                </div>
+                <div class="form-row mt-3">
+                    <div class="col col-md-5 mr-4 ml-4">
+                        <label for="password">Password</label>
+                        <input class="form-control" th:field="*{password}" type="password" id="password" placeholder="Password..." required>
+                    </div>
+                    <div class="col col-md-5 ml-4 mr-2">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input class="form-control" th:field="*{confirmPassword}" type="password" id="confirmPassword" placeholder="Confirm Password..." required>
+                    </div>
+                </div>
+                <hr class="hr-blue">
+                <div class="form-row">
+                    <div class="col col-md-5 mr-4 ml-4">
+                        <label for="firstName">First Name</label>
+                        <input class="form-control" th:field="*{firstName}" type="text" id="firstName" placeholder="First Name..." required>
+                    </div>
+                    <div class="col col-md-5 ml-4 mr-2">
+                        <label for="lastName">Last Name</label>
+                        <input class="form-control" th:field="*{lastName}" type="text" id="lastName" placeholder="Last Name..." required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="text text-center col-md-12 px-4 ml-1">
+                        <label for="uniqueCitizenNumber">UCN</label>
+                        <input class="form-control" th:field="*{uniqueCitizenNumber}" type="text" id="uniqueCitizenNumber" placeholder="UCN..." required>
+                    </div>
+                </div>
+                <hr class="hr-blue">
+                <div class="text text-center">
+                    <button type="submit" class="btn btn-blue">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</th:block>
